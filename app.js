@@ -1,9 +1,19 @@
+const campoPesquisa = document.getElementById("campo-pesquisa");
+
+// Adiciona um ouvinte de eventos para a tecla Enter
+campoPesquisa.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    pesquisar(); // Chama a função de pesquisa
+  }
+});
+
 function pesquisar() {
     // Essa função é responsável por buscar dados e exibir os resultados na seção com o ID "resultados-pesquisa"
   
     let section = document.getElementById("resultados-pesquisa"); // Seleciona a seção onde os resultados serão exibidos
 
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
+
 
     // Se o campoPesquisa for uma string sem nada
     if (campoPesquisa == "" || campoPesquisa ==" ") {
